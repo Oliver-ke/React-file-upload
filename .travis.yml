@@ -5,4 +5,10 @@ catche:
   directories:
     - "node_modules"
 
+env:
+  - CLOUD_NAME = 'oliver-k'
+  - API_KEY = '817564648324395'
+  - API_SECRET = 'cWIsY9umwmVf3KeYbs7jJbwh-5A'
+  - MONGO_URI = 'mongodb://oliver96:kelechi96@ds033400.mlab.com:33400/nodeproject1'
+
 
