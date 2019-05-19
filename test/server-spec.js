@@ -1,8 +1,18 @@
-const expect = require('chai').expect;
-const server = require('../helper');
+const chai = require('chai');
+const app = require('../server');
+const chaiHttp = require('chai-http');
 
-describe('test', () => {
-	it('should return a string', () => {
-		expect('ci with travis').to.equal('ci with travis');
+chai.use(chaiHttp);
+
+chai.should();
+
+describe('media', () => {
+	describe('GET', () => {
+		it('should return a responce', (done) => {
+			chai.request(app).get('/media').end((err, res) => {
+				res.should.have.status(200);
+				done();
+			});
+		});
 	});
 });
